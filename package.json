@@ -1,6 +1,12 @@
 {
   "name": "singlepage",
   "devDependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-jasmine": "^0.3.7",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "phantomjs-prebuilt": "^2.1.4"
   }
 }

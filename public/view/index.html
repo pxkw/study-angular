@@ -1,7 +1,7 @@
 <h1> Index </h1>
 <div ng-if='msg'>{{msg}}</div>
 <ul>
- <li><a href='/#/help'>help</a></li>
- <li><a href='/#/help/foo'>help(foo)</a></li>
- <li><a href='/#/help/bar'>help(bar)</a></li>
+ <li><a ui-sref="help">help</a></li>
+ <li><a ui-sref="help.what({what: 'foo'})">help(foo)</a></li>
+ <li><a ui-sref="help.what({what: 'bar'})">help(bar)</a></li>
 </ul>
