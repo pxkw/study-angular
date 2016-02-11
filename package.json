@@ -3,7 +3,7 @@
   "scripts": {
     "start": "gulp start",
     "test": "gulp test",
-    "postinstall": "./node_modules/.bin/webdriver-manager update --standalone"
+    "postinstall": "bower i && ./node_modules/.bin/webdriver-manager update --standalone"
   },
   "devDependencies": {
     "express": "^4.13.3",
