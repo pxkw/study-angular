@@ -1,9 +1,20 @@
 'use strict';
-var PORT = 8080;
-var express = require('express');
-var app = express();
-app.use(express.static(__dirname + '/public'));
-app.listen(PORT, function(){
-  console.log("App started on port " + PORT);
-});
+const PORT = 8080;
+const express = require('express');
+const server = express();
+ 
+var app;
 
+exports.start = (cb) => {
+  server.use(express.static(__dirname + '/public'));
+  app = server.listen(PORT, function(){
+    console.log(`Server started on PORT ${PORT}.`);
+    cb && cb();
+  });
+};
+
+exports.stop = (cb) => {
+  app.close();
+  console.log(`Server on port ${PORT} is closed.`);
+  cb && cb();
+};
