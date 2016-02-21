@@ -4,10 +4,24 @@ describe('Visitor', () => {
   });
 
   it('should be able to go to help page.', () => {
-    element(by.linkText('help(foo)')).click();
+    element(by.linkText('Help(foo)')).click();
     expect($('.title').getText()).toEqual('Help!');
-    expect($('.msg').getText()).toEqual('About \'foo\'.');
-    element(by.linkText('home')).click();
+    element(by.linkText('Home')).click();
     expect($('.title').getText()).toEqual('Index');
+  });
+
+
+  it('should be able to download json.', (done) => {
+    element(by.linkText('DL')).click();
+    expect($('.title').getText()).toEqual('DL!');
+
+    browser.ignoreSynchronization = true;
+
+    element(by.linkText('Download JSON')).click().then( () => {
+      expect($('html').getText()).toEqual('{"some":"message"}');
+
+      browser.ignoreSynchronization = false;
+      done();
+    });
   });
 });

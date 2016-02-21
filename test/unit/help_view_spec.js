@@ -24,7 +24,7 @@ describe('help view', function() {
 
   it('should have a link to home', function() {
     var link = $('.link');
-    expect(link.text()).toEqual('home');
+    expect(link.text()).toEqual('Home');
     expect(link.attr('href')).toEqual('#/');
   });
 });

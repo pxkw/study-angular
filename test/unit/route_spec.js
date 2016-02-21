@@ -11,5 +11,6 @@ describe('route', function() {
     expect($state.href('home')).toEqual('#/');
     expect($state.href('help')).toEqual('#/help');
     expect($state.href('help.what')).toEqual('#/help/');
+    expect($state.href('dl')).toEqual('#/dl');
   });
 });
