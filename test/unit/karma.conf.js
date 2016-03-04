@@ -6,21 +6,21 @@ module.exports = function(config) {
       'view/*.html': ['ng-html2js']
     },
     files: [ 
-      'public/bower_components/jquery/dist/jquery.js',
-      'public/bower_components/angular/angular.min.js',
-      'public/bower_components/angular-ui-router/release/angular-ui-router.js',
-      'public/bower_components/angular-mocks/angular-mocks.js',
-      'public/app.js',
-      'public/view/*.html',
+      'src/public/lib/jquery/dist/jquery.js',
+      'src/public/lib/angular/angular.min.js',
+      'src/public/lib/angular-ui-router/release/angular-ui-router.js',
+      'src/public/lib/angular-mocks/angular-mocks.js',
+      'src/public/app.js',
+      'src/public/view/*.html',
       'test/unit/**/*_spec.js',
       'test/unit/helper/*.js'
     ],
     exclude: [ '**/*.swp' ],
     preprocessors: {
-      'public/view/*.html': ['ng-html2js']
+      'src/public/view/*.html': ['ng-html2js']
     },
     ngHtml2JsPreprocessor: {
-      stripPrefix: "public/",
+      stripPrefix: "src/public/",
       moduleName: 'templates'
     },
     reporters: ['progress'],

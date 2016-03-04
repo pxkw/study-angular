@@ -4,7 +4,7 @@ const gulp = require('gulp');
 const karma = require('karma');
 const protractor = require('gulp-protractor').protractor;
 const runSequence = require('run-sequence');
-const app = require('./server.js');
+const app = require('./src/server/server.js');
 
 
 gulp.task('start', done => app.start(done) );

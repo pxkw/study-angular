@@ -6,7 +6,7 @@ const server = express();
 var app;
 
 exports.start = (cb) => {
-  server.use(express.static(__dirname + '/public'));
+  server.use(express.static(__dirname + '/../public'));
   app = server.listen(PORT, function(){
     console.log(`Server started on PORT ${PORT}.`);
     cb && cb();
