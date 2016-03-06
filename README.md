@@ -4,10 +4,11 @@ Studying:
 
 + AngularJS
   - ui-router
-+ Unit tests (Karma)
++ Unit tests for front-end (Karma)
   - view
   - controller
   - router
++ Unit test for back-end (Jasmine)
 + e2e tests (Protractor)
 + Gulp
 
@@ -16,6 +17,7 @@ Studying:
 + Node.js
   - gulp
   - bower
+  - PhantomJS
 
 ## QuickStart
 
@@ -27,19 +29,9 @@ Then access http://localhost:8080 .
 
 ## Test
 
-Run all tests:
-``` sh
-npm test 
-```
-
-Run unit tests:
-``` sh
-gulp test:unit
-```
-
-
-Run e2e tests:
-``` sh
-gulp test:e2e
-```
+- `gulp test` to run all tests. (or `npm test`)
+- `gulp test:e2e` : e2e tests
+- `gulp test:unit` : Unit tests
+- `gulp test:unit:front` : Unit tests for front-end
+- `gulp test:unit:server` : Unit tests for server
 

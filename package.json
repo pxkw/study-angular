@@ -16,5 +16,8 @@
     "karma-phantomjs-launcher": "^1.0.0",
     "phantomjs-prebuilt": "^2.1.4",
     "run-sequence": "^1.1.5"
+  },
+  "dependencies": {
+    "gulp-jasmine": "^2.3.0"
   }
 }
