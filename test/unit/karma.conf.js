@@ -1,6 +1,6 @@
 module.exports = function(config) {
   config.set({
-    basePath: '../../',
+    basePath: process.env.PJ_HOME,
     frameworks: ['jasmine'],
     preprocessors: {
       'view/*.html': ['ng-html2js']
