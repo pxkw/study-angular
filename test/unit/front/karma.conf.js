@@ -12,8 +12,8 @@ module.exports = function(config) {
       'src/public/lib/angular-mocks/angular-mocks.js',
       'src/public/app.js',
       'src/public/view/*.html',
-      'test/unit/**/*_spec.js',
-      'test/unit/helper/*.js'
+      'test/unit/front/**/*_spec.js',
+      'test/unit/front/helper/*.js'
     ],
     exclude: [ '**/*.swp' ],
     preprocessors: {

@@ -15,9 +15,11 @@ gulp.task('stop', done => server.stop(done) );
 
 gulp.task('test', done => runSequence('test:e2e', 'test:unit', done) );
 
-gulp.task('test:unit', done => {
+gulp.task('test:unit', ['test:unit:front']);
+
+gulp.task('test:unit:front', done => {
   new karma.Server({
-    configFile: PJ_HOME+'/test/unit/karma.conf.js',
+    configFile: PJ_HOME+'/test/unit/front/karma.conf.js',
     singleRun: true
   }).start(done);
 });
